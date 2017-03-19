@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Angular Examples</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<script src="angular.min.js"></script>
+	<link href="" rel="stylesheet">
+</head>
+<body>
+	<!--范围ng-app-->
+	<div ng-app="">
+		<ul ng-init="json={a:'abc',b:55,c:99}">
+			<li ng-repeat="(key,value) in json">#{{key}}={{value}}</li>
+		</ul>
+
+	<input type="text" ng-model="str">
+	<div ng-bind="str" ng-init="a=0;b=0;"></div>
+<!--双向绑定-->
+		<input type="text" ng-model="str2">
+		<input type="text" ng-model="str2">
+		<hr>
+		<input type="text" ng-model="a">
+		<input type="text" ng-model="b">
+		<span ng-bind="a*b"></span><br><span style="color:red">{{a}}*{{b}}={{a*b}}</span><br>
+		<input type="text" ng-model="aa">
+		<input type="button" value="按钮" ng-click="aa=aa+1">
+	</div>
+	
+</body>
+</html>

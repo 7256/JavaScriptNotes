@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vue v2.2.4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="vue.min.js"></script>
+        <script>
+        window.onload=function(){
+            var app = new Vue({
+                el:"#app",
+                data: {
+                    message: 'Hello Vue!'
+                }
+            });
+        };
+        </script>
+    </head>
+    <body>
+<!-- html代码,new一个Vue对象 -->
+    <div id="app">
+       <p> {{message}}</p>
+    </div>
+    </body>
+</html>

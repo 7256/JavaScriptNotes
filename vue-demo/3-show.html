@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="vue.min.js"></script>
+        <script>
+        window.onload=function(){
+            new Vue({
+                el:"#box", //选择器
+                data: {
+                    msg: 'Hello Vue!',
+                    a: true,
+                },
+                methods:{
+                    hide: function(){
+                        this.a = false;
+                    }
+                }
+            });
+        };
+        </script>
+    </head>
+    <body>
+        <div id="box">
+            <!--双击隐藏-->
+            <!--<input type="button" value="按钮" v-on:dblclick="a=false"> 另一种写法-->
+            <input type="button" value="按钮" v-on:dblclick="hide()">
+            <div style="width:100px;height:100px;background-color:red" v-show="a" >
+
+            </div>
+        </div>
+    </body>
+</html>
